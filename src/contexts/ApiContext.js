@@ -6,6 +6,7 @@ export const ApiContext = createContext("");
 export const ApiProvider = ({ children }) => {
   const [termekLista, setTermekLista] = useState([]);
   const [katLista, setKatLista] = useState([]);
+  
 
   const getAdat = async (vegpont, callbackFv) => {
     try {

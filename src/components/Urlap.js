@@ -42,16 +42,20 @@ function Urlap(){
                <div className="mb-3">
                     <label htmlFor="category" className="form-label">Kategória</label>
                     <select className="form-select" aria-label="Kategória" id="category" aria-describedby="categoryHelp">
-                        <option value={adat.category}></option>
+                        <option value="?"></option>
                     </select>
                 </div>
 
                 <div className="mb-3">
                     <label htmlFor="description" className="form-label">Leírás</label>
-                    {/* <input type="form-floating" value={adat.description} onChange={valtozasKezeles} className="form-control" id="description" aria-describedby="descriptionHelp"></input> */}
                     <div className="form-floating">
-                        <textarea className="form-control" onChange={valtozasKezeles} placeholder="Leirás" id="description"></textarea>
+                        <textarea className="form-control" value={adat.description} onChange={valtozasKezeles} placeholder="Leirás" id="description" aria-describedby="descriptionHelp"></textarea>
                     </div>
+                </div>
+
+                <div className="mb-3">
+                    <label htmlFor="image" className="form-label">Kép</label>
+                    <img src={adat.image} onChange={valtozasKezeles} className="img-thumbnail" alt={adat.title} id="image" aria-describedby="imageHelp"></img>
                 </div>
 
                 
